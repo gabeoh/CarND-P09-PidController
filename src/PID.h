@@ -3,16 +3,18 @@
 
 class PID {
 public:
-  /*
-  * Errors
-  */
+  /**
+   * Errors
+   */
   double p_error;
   double i_error;
   double d_error;
+  double total_error;
+  int update_count;
 
-  /*
-  * Coefficients
-  */ 
+  /**
+   * Coefficients
+   */
   double Kp;
   double Ki;
   double Kd;
