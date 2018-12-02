@@ -27,8 +27,9 @@ void PID::UpdateError(double cte) {
   p_error = cte;
   i_error += cte;
 
-  total_error += cte * cte;
   ++update_count;
+  if (update_count > 500)
+    total_error += cte * cte;
 }
 
 double PID::TotalError() {
